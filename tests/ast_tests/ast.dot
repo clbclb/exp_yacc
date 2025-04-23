@@ -1,0 +1,160 @@
+digraph AST {
+  node [fontname="Arial"];
+  node285 [label="CompUnit", shape=box, style=filled, fillcolor=lightblue];
+  node285 -> node5 [label="decl"];
+  node5 [label="VarDecl\nlogicNumber=0\n", shape=box, style=filled, fillcolor=lightyellow];
+  node285 -> node22 [label="funcdef"];
+  node22 [label="FuncDecl\nint\ntestLAnd(int n)\n", shape=box, style=filled, fillcolor=lightcoral]
+  node22 -> node17;
+  node17 [label = "Block", shape=box, style=filled, fillcolor=lightgreen]
+  node17 -> node15 [label="BlockItem 1"]
+  node15[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node15 -> node16
+  node16 [label="Stmt\nlogicNumber=n"]
+  node17 -> node19 [label="BlockItem 2"]
+  node19[label="BlockItem\nreturn\n1\n", shape=box, style=filled, fillcolor=lightskyblue]
+  node285 -> node39 [label="funcdef"];
+  node39 [label="FuncDecl\nint\ntestLOr(int n)\n", shape=box, style=filled, fillcolor=lightcoral]
+  node39 -> node34;
+  node34 [label = "Block", shape=box, style=filled, fillcolor=lightgreen]
+  node34 -> node32 [label="BlockItem 1"]
+  node32[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node32 -> node33
+  node33 [label="Stmt\nlogicNumber=n"]
+  node34 -> node36 [label="BlockItem 2"]
+  node36[label="BlockItem\nreturn\n1\n", shape=box, style=filled, fillcolor=lightskyblue]
+  node285 -> node281 [label="mainfuncdef"];
+  node281 [label="MainFuncDecl\nint\nmain()\n", shape=box, style=filled, fillcolor=lightgrey]
+  node281 -> node51;
+  node51 [label = "Block", shape=box, style=filled, fillcolor=lightgreen]
+  node51 -> node50 [label="BlockItem 1"]
+  node50[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node50 -> node47
+  node47 [label="VarDecl\nnumber\n", shape=box, style=filled, fillcolor=lightyellow];
+  node51 -> node55 [label="BlockItem 2"]
+  node55[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node55 -> node56
+  node56 [label="Stmt\nnumber=getint()"]
+  node51 -> node61 [label="BlockItem 3"]
+  node61[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node61 -> node62
+  node62 [label="Stmt\nlogicNumber=1"]
+  node51 -> node80 [label="BlockItem 4"]
+  node80[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node80 -> node81
+  node81 [label="If\ncond: !logicNumber&&testLAnd(number)\n"]
+  node81 -> node77 [label="ifstmt"]
+  node77[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node77 -> node76
+  node76 [label = "Block", shape=box, style=filled, fillcolor=lightgreen]
+  node76 -> node74 [label="BlockItem 1"]
+  node74[label="BlockItem\nexp\n\n", shape=box, style=filled, fillcolor=lightskyblue]
+  node51 -> node88 [label="BlockItem 5"]
+  node88[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node88 -> node89
+  node89 [label="printf\n\"%d\\n\"\nlogicNumber"]
+  node51 -> node94 [label="BlockItem 6"]
+  node94[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node94 -> node95
+  node95 [label="Stmt\nlogicNumber=1"]
+  node51 -> node113 [label="BlockItem 7"]
+  node113[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node113 -> node114
+  node114 [label="If\ncond: testLAnd(number)&&!logicNumber\n"]
+  node114 -> node110 [label="ifstmt"]
+  node110[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node110 -> node109
+  node109 [label = "Block", shape=box, style=filled, fillcolor=lightgreen]
+  node109 -> node107 [label="BlockItem 1"]
+  node107[label="BlockItem\nexp\n\n", shape=box, style=filled, fillcolor=lightskyblue]
+  node51 -> node121 [label="BlockItem 8"]
+  node121[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node121 -> node122
+  node122 [label="printf\n\"%d\\n\"\nlogicNumber"]
+  node51 -> node127 [label="BlockItem 9"]
+  node127[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node127 -> node128
+  node128 [label="Stmt\nlogicNumber=0"]
+  node51 -> node146 [label="BlockItem 10"]
+  node146[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node146 -> node147
+  node147 [label="If\ncond: !logicNumber||testLOr(number)\n"]
+  node147 -> node143 [label="ifstmt"]
+  node143[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node143 -> node142
+  node142 [label = "Block", shape=box, style=filled, fillcolor=lightgreen]
+  node142 -> node140 [label="BlockItem 1"]
+  node140[label="BlockItem\nexp\n\n", shape=box, style=filled, fillcolor=lightskyblue]
+  node51 -> node154 [label="BlockItem 11"]
+  node154[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node154 -> node155
+  node155 [label="printf\n\"%d\\n\"\nlogicNumber"]
+  node51 -> node160 [label="BlockItem 12"]
+  node160[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node160 -> node161
+  node161 [label="Stmt\nlogicNumber=0"]
+  node51 -> node179 [label="BlockItem 13"]
+  node179[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node179 -> node180
+  node180 [label="If\ncond: testLOr(number)||!logicNumber\n"]
+  node180 -> node176 [label="ifstmt"]
+  node176[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node176 -> node175
+  node175 [label = "Block", shape=box, style=filled, fillcolor=lightgreen]
+  node175 -> node173 [label="BlockItem 1"]
+  node173[label="BlockItem\nexp\n\n", shape=box, style=filled, fillcolor=lightskyblue]
+  node51 -> node187 [label="BlockItem 14"]
+  node187[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node187 -> node188
+  node188 [label="printf\n\"%d\\n\"\nlogicNumber"]
+  node51 -> node209 [label="BlockItem 15"]
+  node209[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node209 -> node210
+  node210 [label="If\ncond: number<=number>number\n"]
+  node210 -> node204 [label="ifstmt"]
+  node204[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node204 -> node205
+  node205 [label="printf\n\"true\\n\"\n"]
+  node210 -> node207 [label="elsestmt"]
+  node207[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node207 -> node208
+  node208 [label="printf\n\"false\\n\"\n"]
+  node51 -> node231 [label="BlockItem 16"]
+  node231[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node231 -> node232
+  node232 [label="If\ncond: number>=number<number\n"]
+  node232 -> node226 [label="ifstmt"]
+  node226[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node226 -> node227
+  node227 [label="printf\n\"true\\n\"\n"]
+  node232 -> node229 [label="elsestmt"]
+  node229[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node229 -> node230
+  node230 [label="printf\n\"false\\n\"\n"]
+  node51 -> node253 [label="BlockItem 17"]
+  node253[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node253 -> node254
+  node254 [label="If\ncond: number<number>=number\n"]
+  node254 -> node248 [label="ifstmt"]
+  node248[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node248 -> node249
+  node249 [label="printf\n\"true\\n\"\n"]
+  node254 -> node251 [label="elsestmt"]
+  node251[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node251 -> node252
+  node252 [label="printf\n\"false\\n\"\n"]
+  node51 -> node275 [label="BlockItem 18"]
+  node275[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node275 -> node276
+  node276 [label="If\ncond: number>number<=number\n"]
+  node276 -> node270 [label="ifstmt"]
+  node270[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node270 -> node271
+  node271 [label="printf\n\"true\\n\"\n"]
+  node276 -> node273 [label="elsestmt"]
+  node273[label="BlockItem", shape=box, style=filled, fillcolor=lightskyblue]
+  node273 -> node274
+  node274 [label="printf\n\"false\\n\"\n"]
+  node51 -> node279 [label="BlockItem 19"]
+  node279[label="BlockItem\nreturn\n0\n", shape=box, style=filled, fillcolor=lightskyblue]
+}
